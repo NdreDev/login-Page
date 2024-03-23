@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Hp Font"; 
+  src: url(../fonts/harry-potter.ttf);
+}
+
+@font-face {
+  font-family: "Dumbledore";
+  src: url(../fonts/dumbledore.ttf);
+}
+
+:root {
+  --hp-font: "Hp Font";
+  --default-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+}
+
+
+.left-container {
+  width: 35%;
+  height: 100vh;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.left-container > .banner {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 248, 255, 0.297);
+  margin: 0px;
+}
+
+.left-container > .banner > img {
+  width: 250px;
+  height: 150px;
+}
+
+.left-container > .banner > h1 {
+  font-family: var(--hp-font), sans-serif;
+  font-size: 55px;
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.left-container > .credits {
+  font-family: var(--default-font);
+  position: absolute;
+  bottom: 2%;
+}
+
+.left-container > .credits > a {
+  color: white;
+}
+
+/* Right Container */
+
+.right-container {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Dumbledore', sans-serif;
+  overflow: hidden;
+}
+
+.right-container > .notice-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.notice-container > .notice {
+  letter-spacing: 1px;
+}
+
+.right-container > .form-container {
+  width: 65vw;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+  align-items: flex-start;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  font-size: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form-group > .input-field:nth-child(even) {
+  margin-left: 50px;
+}
+
+.form-group > .input-field > input {
+  color: black;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 5px;
+  height: 30px;
+  width: 300px;
+}
+
+form > .btn-container {
+  position: absolute;
+  margin-top: 5%;
+}
+
+form > .btn-container > .btn {
+  width: 250px;
+  height: 50px;
+  background: linear-gradient(to left, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: none;
+}
+
+form > .btn-container > .btn:hover {
+  background: white;
+  border: 1px solid black;
+  color: black;
+}
+
+form > .btn-container > p {
+  font-size: 20px;
+}
+
+form > .btn-container > p > a {
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left-container {
+    width: 100%;
+  }
+
+  .right-container {
+    width: 100%;
+  }
+
+  .right-container > .form-container {
+    box-shadow: none;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+    .form-group>.input-field:nth-child(even) {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+}
