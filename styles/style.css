@@ -18,6 +18,7 @@ body {
   display: flex;
 }
 
+/* Left Container */
 
 .left-container {
   width: 35%;
@@ -93,7 +94,7 @@ body {
   width: 65vw;
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 5%;
+  /* padding-bottom: 5%; */
   align-items: flex-start;
   font-weight: bold;
   font-size: 20px;
@@ -121,7 +122,7 @@ body {
 
 form > .btn-container {
   position: absolute;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 form > .btn-container > .btn {
