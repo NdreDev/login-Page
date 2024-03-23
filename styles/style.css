@@ -11,6 +11,7 @@
 :root {
   --hp-font: "Hp Font";
   --default-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --error: red;
 }
 
 body {
@@ -118,6 +119,26 @@ body {
   margin-top: 5px;
   height: 30px;
   width: 300px;
+}
+
+.form-group > .input-field > input.invalid {
+  border: 1px solid var(--error);
+  background-color: white;
+  color: black;
+}
+
+#password-error {
+  color: var(--error);
+  opacity: 0;
+}
+
+#password-error.active {
+  color: var(--error);
+  opacity: 1;
+}
+
+input.invalid {
+  border: 1px solid var(--error);
 }
 
 form > .btn-container {

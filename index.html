@@ -29,7 +29,7 @@
         <p class="notice">Magical greetings and welcome to Hogwarts!</p>
       </div>
       <div class="form-container">
-        <form action="#" method="post">
+        <form action="javascript:void(0)" method="post" onsubmit="validatePassword()">
           <h3>Let's get started</h3>
           <div class="form-group">
             <div class="input-field">
@@ -54,7 +54,8 @@
           <div class="form-group">
             <div class="input-field">
               <label for="password">Password</label><br>
-              <input type="password" name="password" id="password">
+              <input type="password" name="password" id="password"><br>
+              <span id="password-error">* Password doesn't match</span>
             </div>
             <div class="input-field">
               <label for="confirm_password">Confirm Password</label><br>
